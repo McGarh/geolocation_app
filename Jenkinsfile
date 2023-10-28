@@ -71,12 +71,12 @@ environment {
         stage("pushing the Backend helm charts to nexus"){
             steps{
                 script{
-                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'Nexus_2nd', usernameVariable: 'jenkins-user', passwordVariable: 'docker_pass']]) {
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'Nexus_2nd', usernameVariable: 'admin', passwordVariable: 'student1']]) {
                             def mavenPom = readMavenPom file: 'pom.xml'
                             POM_VERSION = "${mavenPom.version}"
                             sh "echo ${POM_VERSION}"
                             sh "tar -czvf  app-${POM_VERSION}.tgz app/"
-                            sh "curl -u jenkins-user:$docker_pass http://45.56.79.252:8081/repository/biomed/ --upload-file app-${POM_VERSION}.tgz -v"  
+                            sh "curl -u admin:$student http://45.56.79.252:8081/repository/biomed/ --upload-file app-${POM_VERSION}.tgz -v"  
                     }
                 } 
             }
