@@ -7,8 +7,8 @@ pipeline {
   maven 'M2_HOME'
 }
 environment {
-    registry = '076892551558.dkr.ecr.us-east-1.amazonaws.com/jenkins'
-    registryCredential = 'jenkins-ecr'
+    registry = '216174199642.dkr.ecr.us-east-1.amazonaws.com/jenkins_ecr'
+    registryCredential = 'AWS_ECR_ID'
     dockerimage = ''
 
      NEXUS_VERSION = "nexus3"
@@ -24,7 +24,7 @@ environment {
             steps {
                 echo 'build & SonarQube analysis...'
                withSonarQubeEnv('SonarServer') {
-                   sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=kserge2001_geolocation -X'
+                   sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=McGarh_geolocation -X'
                }
             }
           }
