@@ -2,10 +2,10 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount:2
+replicaCount: 2
 
 image:
-  repository: 076892551558.dkr.ecr.us-east-1.amazonaws.com/jenkins #updated url
+  repository: 216174199642.dkr.ecr.us-east-1.amazonaws.com/jenkins_ecr #updated url
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
