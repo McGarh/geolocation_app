@@ -1,6 +1,6 @@
 pipeline {
     triggers {
-   agent any
+        agent any
     tools {
   maven 'M2_HOME'
 }
@@ -82,5 +82,6 @@ environment {
                 } 
             }
         }     	    
+    }
     }
 }
