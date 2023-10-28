@@ -76,7 +76,7 @@ environment {
                             POM_VERSION = "${mavenPom.version}"
                             sh "echo ${POM_VERSION}"
                             sh "tar -czvf  app-${POM_VERSION}.tgz app/"
-                            sh "curl -u admin:$student http://45.56.79.252:8081/repository/biomed/ --upload-file app-${POM_VERSION}.tgz -v"  
+                            sh "curl -u admin:$student1 http://45.56.79.252:8081/repository/biomed/ --upload-file app-${POM_VERSION}.tgz -v"  
                     }
                 } 
             }
