@@ -11,7 +11,7 @@ environment {
      NEXUS_VERSION = "nexus3"
      NEXUS_PROTOCOL = "http"
      NEXUS_URL = "45.56.79.252:8081"
-     NEXUS_REPOSITORY = "biomed"
+     NEXUS_REPOSITORY = "biomed-helm"
      NEXUS_CREDENTIAL_ID = "Nexus_2nd"
      POM_VERSION = ''
 }
